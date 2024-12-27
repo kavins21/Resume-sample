@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Employee Task Tracker</title>
+   
+   <style>
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    th, td {
+        padding: 10px;
+        text-align: left;
+    }
+    th {
+        background-color: #f6df92f4;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+    }
+    body {
+        background-image: url('https://static.vecteezy.com/system/resources/previews/016/219/105/original/red-white-professional-geometric-background-design-vector.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    form {
+        margin-left: 39.5%;
+        width: 20%;
+        background-color: rgba(243, 240, 240, 0.8);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    label {
+        font-weight: bold;
+    }
+    textarea{
+        resize: none;
+    }
+    input, textarea {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width:100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    button {
+        background-color: #00ccff;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        margin-left:38.5%;
+    }
+    button:hover {
+        background-color: #0099cc;
+    }
+    table {
+        width: 80%;
+        margin-top: 20px;
+    }
+    th ,td
+    {
+        text-align: center;
+    }
+    td{
+        background-color: white
+    }
+</style>
+<script>
+    function submit(event){
+      event.preventDefault();
+      var table=document.getElementById("taskTable");
+      var row=table.insertRow(-1);
+      var EmployeeName=document.getElementById("Employeename").value;
+      var Tasktitle=document.getElementById("Tasktitle").value;
+      var TaskDescription=document.getElementById("Taskdescription").value;
+      var Date=document.getElementById("Date").value;
+
+     
+      var cell1=row.insertCell(0);
+      var cell2=row.insertCell(1);
+
+      var cell3=row.insertCell(2);
+      var cell4=row.insertCell(3);
+
+      cell1.innerHTML=EmployeeName;
+      cell2.innerHTML=Tasktitle;
+      cell3.innerHTML=TaskDescription;
+      cell4.innerHTML=Date;
+
+
+    }
+</script>
+
+    <body>
+        
+       <center> <h1>Task Tracker</h1></center>
+        <form>
+            <label for="Employeename">Employee Name</label>
+            <input type="text" id="Employeename" name="Employeename" required>
+            <br>
+            <br>
+            <label for="Tasktitle">Task Title</label>
+            <input type="text" id="Tasktitle" name="Tasktitle" required>
+             <br>
+             <br>
+             <label for="Taskdescription">Task Description</label>
+             
+            <textarea name="Taskdescription" id="Taskdescription" required >   
+            </textarea>
+            <br>
+
+            <label for="Date">Date</label>
+            <input type="Date" id="Date" name="Date" required>
+            <br>
+            <br>
+            <button type="submit" onclick="submit(event)">Submit</button>
+        </form>
+<br>
+<center>
+       <table  id="taskTable">
+
+        <theader>
+            <tr>
+                <th rowspan="2">Employee name</th>
+                <th colspan="2">Task Details</th>
+                <th rowspan="2">Due Date</th>
+            </tr>
+            <tr>
+                <th>task Title </th>
+                <th>Task Description</th>
+            </tr>
+        </theader>
+        <tbody>
+            <tr>
+                <td>Kavin.S</td>
+                <td>Task 1</td>
+                <td>Project Completion</td>
+                <td>2024-11-21</td>
+            </tr>
+            <tr>
+                <td>Kabiyashwanth.V</td>
+                <td>Task 2</td>
+                <td>Paper submission</td>
+                <td>2024-12-26</td>
+            </tr>
+        </tbody>
+       </table>
+</center>
+
+
