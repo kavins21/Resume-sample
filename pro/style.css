@@ -550,12 +550,17 @@ font-size: 24px;
 
 
 
-
+.eve{
+  background-color: #f4f1de;
+  font-family: sans-serif;
+  color: #3d405b;
+}
 
 .events {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    background-color: #f4f1de;
   }
   
   .events-title {
@@ -563,6 +568,16 @@ font-size: 24px;
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 30px;
+  }
+  .event-card1 {
+    display: flex;
+    align-items: center;
+    background-color: #f4f1de;
+    border-radius: 10px;
+   
+    margin-bottom: 20px;
+    padding: 20px;
+    gap: 20px;
   }
   
   .event-card {
@@ -625,7 +640,22 @@ font-size: 24px;
     margin: 5px 0;
   }
   
-  .event-button {
+  .event-button1 {
+    position:absolute;
+    top:195.1pc;
+    left:70pc;
+    background-color: #f9cc8a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  .event-button2 {
+    position:absolute;
+    top:209.1pc;
+    left:70pc;
     background-color: #f9cc8a;
     color: white;
     border: none;
@@ -712,21 +742,24 @@ font-size: 24px;
   
   .map {
     position: relative;
-    width: 100%;
+    width: 300%;
     max-width: 400px;
   }
   
   .map img {
-    width: 100%;
+   
+    right:10pc;
+    width: 100pc;
     border-radius: 10px;
   }
   
   .info-box {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 10%;
+    height:70%;
     transform: translate(-50%, -50%);
-    background-color: #333;
+    background-color: #3d405b;
     color: white;
     padding: 20px;
     border-radius: 10px;
@@ -740,16 +773,21 @@ font-size: 24px;
   
   .info-box p {
     margin: 5px 0;
-    font-size: 0.9rem;
+    font-size: 1.0rem;
   }
   
   .directions-button {
+    position: absolute;
+    right:0px;
+    top:140px;
+    width:100%;
     margin-top: 10px;
     padding: 10px;
     background-color: #f77b5a;
     color: white;
     border: none;
-    border-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
     cursor: pointer;
   }
   
