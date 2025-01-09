@@ -1,0 +1,401 @@
+*{
+    list-style: none;
+  
+  }
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 110px;
+    background-color: #0171f9; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    box-sizing: border-box;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+  }
+  
+  header .logo img {
+    height: 40px;
+    width: auto;
+  }
+  
+  
+  header nav {
+    flex-grow: 1; 
+    text-align: right; 
+  }
+  
+  header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2rem; 
+  }
+  
+  header nav ul li {
+    margin: 0;
+  }
+  
+  header nav ul li a {
+    position: relative;
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 15px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    border-radius: 20px;
+  }
+  header nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); 
+    color: #fff;
+    padding: 8px 16px;
+  
+  }
+  header nav ul li a.active {
+    background-color: rgba(255, 255, 255, 0.2); 
+    color: #fff; 
+    padding: 8px 16px;
+    border-radius: 20px; 
+}
+
+  
+  
+  header nav ul li .button {
+    background-color: #ee626b;
+    padding: 8px 16px;
+    border-radius: 50px;
+    color: white;
+    transition: background-color 0.3s;
+    white-space: nowrap; 
+  }
+  
+  header nav ul li .button:hover {
+    background-color: #ee626b;
+  }
+  @media (max-width: 768px) {
+    header {
+      padding: 30px 40px; 
+    }
+  
+    header nav ul {
+      gap: 1rem; 
+      flex-wrap: wrap; 
+    }
+  
+    header nav ul li {
+      margin: 5px;
+    }
+  
+    header nav ul li .button {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    header {
+      padding: 20px 20px; 
+    }
+  
+    header nav ul {
+      flex-direction: column; 
+      align-items: flex-end;
+    }
+  
+    header .logo img {
+      height: 40px;
+    }
+  
+    header nav ul li a {
+      font-size: 14px;
+    }
+  
+    header nav ul li .button {
+      font-size: 13px;
+      padding: 6px 12px;
+    }
+  }  
+.banner {
+    background-image: url('/ind-img/page-heading-bg.jpg');
+    border-bottom-right-radius: 150px;
+    border-bottom-left-radius: 150px;
+    height: 62vh;
+    background-size: cover;
+    background-position: center; 
+    position: relative;
+    z-index: 1;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2; 
+    color: black;
+}
+
+.banner-content h3 {
+    font-size: 48px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.banner-content .ShopToHome {
+    font-size: 16px;
+    color:#fff;
+}
+
+.banner-content .ShopToHome a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.items {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.home-items ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+
+.home-items ul li a {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: black; 
+    text-decoration: none;
+    border-radius: 20px;
+    background-color: #eeeeee; 
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-top: 50px;
+}
+
+
+.home-items ul li a.active {
+    background-color: #ee626b; 
+    color: white; 
+    font-weight: bold;
+}
+.home-items ul li a.active:hover{
+    background-color: #ee626b; 
+    color: white; 
+    font-weight: bold;
+}
+
+
+.home-items ul li a:hover {
+    color: #ee626b;
+}
+.trending-games {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 100px;
+    margin-top: 70px;
+    
+  }
+  
+  .trending-games .trending-game-images {
+    background-color: #eeeeee; 
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 22%; 
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+  }
+  
+  .trending-games .trending-game-images .game-img {
+    position: relative;
+    border-radius: 15px; 
+    overflow: hidden;
+    
+  }
+  
+  .trending-games .trending-game-images .game-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .trending-games .trending-game-images .game-price {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #008af8; 
+    color: #fff;
+    border-radius: 8px;
+    padding: 8px 15px 6px 15px;
+    font-size: 17px;
+    font-weight: 600;
+    z-index: 10;
+    text-transform: uppercase;
+    text-align: right;
+  }
+  
+  .trending-games .trending-game-images .game-price h4 {
+    margin: 0;
+    font-style: normal;
+    font-weight: 500;
+    text-decoration: line-through;
+    font-size: 14px;
+  }
+  
+  .trending-games .trending-game-images .game-price h2 {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  
+  
+  .trending-games .trending-game-images .image-caption p {
+    margin: 0;
+    font-size: 14px;
+    color: #7a7a7a;
+    margin-bottom: 5px;
+    display: inline-block;
+  }
+  
+  .trending-games .trending-game-images .image-caption {
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column; 
+  }
+  
+  .trending-games .trending-game-images .image-caption p {
+    margin: 0;
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 5px;
+    margin-top: 5px; 
+  }
+  
+  .trending-games .trending-game-images .image-caption .title-row {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%; 
+  }
+  
+  .trending-games .trending-game-images .image-caption h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .trending-games .trending-game-images .image-caption i {
+    color: white;
+    font-size: 18px;
+    background-color: #ee626b;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .trending-games .trending-game-images:hover .image-caption h3 {
+    color: #008af8
+  }
+  
+  .trending-games .trending-game-images:hover .image-caption i {
+    background-color: #008af8; 
+  }
+.page {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.page-num ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    margin-top: 40px;
+    gap: 20px;
+}
+
+.page-num ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    text-decoration: none;
+    color: black; 
+    background-color: #eeeeee; 
+    border-radius: 50%; 
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+}
+
+.page-num ul li a.active {
+    background-color: #0171f9; 
+    color: white; 
+    font-weight: bold;
+}
+
+
+.page-num ul li a:hover {
+    background-color: #0171f9; 
+    color: white; 
+}
+
+footer{
+    background-image: url("/ind-img/footer-bg.jpg");
+    padding: 0px 90px 90px;
+    text-align: center;
+    border-top-right-radius: 150px;
+    border-top-left-radius: 150px;
+    height: 10vh;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 10%;
+    margin-bottom: -10%;
+    line-height: 90px;
+  }
+  footer a{
+    color: white;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+  }
+  footer a:hover{
+    color: gainsboro;
+  }
